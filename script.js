@@ -1,3 +1,6 @@
-let name = 'Main-header';
+function showVariable() {
+    let x = 2;
+    console.log(x);
+}
 
-console.log(name.includes('Main'));
+showVariable();
