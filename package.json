@@ -4,7 +4,7 @@
   "description": "Kurs o ES6 babel i webpack",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel script.js --out-file dist/script.compiled.js"
   },
   "repository": {
     "type": "git",
