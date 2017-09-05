@@ -1,0 +1,31 @@
+{
+  "name": "es6-tutorial-strefa-kursow",
+  "version": "1.0.0",
+  "description": "Kurs o ES6 babel i webpack",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamorlowskipoland/es6-tutorial-sk.git"
+  },
+  "keywords": [
+    "es6",
+    "tutorial",
+    "babel",
+    "webpack",
+    "strefa",
+    "kursow"
+  ],
+  "author": "AO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamorlowskipoland/es6-tutorial-sk/issues"
+  },
+  "homepage": "https://github.com/adamorlowskipoland/es6-tutorial-sk#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
