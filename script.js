@@ -1,5 +1,3 @@
-function sumTwoNumbers(x = 1, y = 2) {
-	return x + y;
-}
+let name = 'Main-header';
 
-console.log(sumTwoNumbers());
+console.log(name.includes('Main'));
