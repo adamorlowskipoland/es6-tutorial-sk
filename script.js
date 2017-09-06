@@ -1,21 +1,5 @@
-let giftCard = {
-    sku: 'sk001',
-    name: 'Karta podarunkowa',
-    price: 50,
-    class: 'gift'
-};
+let a = 1;
+let b = 2;
+[a, b] = [b, a];
 
-function createMarkup(product) {
-    return `
-    <div class="product ${product.class}">
-      <h2>${product.name}</h2>
-      <span class="sku">${product.sku}</span>
-      <span class="price">${product.price}</span>
-    </div>
-    `
-}
-
-window.onload = function () {
-    const content = document.querySelector('.content');
-    content.innerHTML = createMarkup(giftCard);
-};
+console.log(a, b);
