@@ -1,6 +1,5 @@
-function getNumbers() {
-    return [1, 2, 3, 4, 5];
+function multiplyValues(a = 2, b = 5 * a) {
+    return a * b;
 }
 
-let [a, , , , e] = getNumbers();
-console.log(a, e);
+console.log(multiplyValues(3));
