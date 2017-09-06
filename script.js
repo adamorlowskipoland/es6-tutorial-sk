@@ -1,13 +1,16 @@
-// function setOptions(options) {
-//     const env = options.env;
-//     const db = options.db;
-//     return [env, db];
-// }
+let sumValues = function (a, b) {
+    return a + b;
+};
 
-function setOptions({env = 'DEV', db}) {        // this way it is more clear that you need to give object with 2 keys
-    return [env, db];
-}
+let sumValues2 = (a, b) => {
+    return a + b;
+};
 
+let sumValues3 = (a, b) => a + b;       // return in the same line - use for simple functions
 
-let opt = setOptions({env: 'DEV', db: 'SQLite'});
-console.log(opt);
+let showValue = a => a;       // no need to use () while using only one parameter
+
+console.log(sumValues(3, 5));
+console.log(sumValues2(3, 5));
+console.log(sumValues3(3, 5));
+console.log(showValue(8));
