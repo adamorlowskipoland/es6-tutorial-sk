@@ -1,16 +1,10 @@
-let sumValues = function (a, b) {
+let array = [10, 20, 30, 40, 50];
+
+let sum = array.reduce(function (a, b) {
     return a + b;
-};
+});
 
-let sumValues2 = (a, b) => {
-    return a + b;
-};
+let sum2 = array.reduce((a, b) => a + b);
 
-let sumValues3 = (a, b) => a + b;       // return in the same line - use for simple functions
-
-let showValue = a => a;       // no need to use () while using only one parameter
-
-console.log(sumValues(3, 5));
-console.log(sumValues2(3, 5));
-console.log(sumValues3(3, 5));
-console.log(showValue(8));
+console.log(sum);
+console.log(sum2);
