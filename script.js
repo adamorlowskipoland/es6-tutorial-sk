@@ -1,13 +1,13 @@
-// function sumValues(a, b, c) {
-//     return a + b + c;
+// function setOptions(options) {
+//     const env = options.env;
+//     const db = options.db;
+//     return [env, db];
 // }
-//
-// let values = [3, 2, 7];
-//
-// console.log(sumValues(...values));
 
-let array1 = [10, 20, 30];
-let array2 = [40, 50, 60];
-// array1.push(array2);     // this will push whole array into array as one element
-array1.push(...array2);     // this puts every elem from array 2 as indyvidual elem intu array1
-console.log(array1);
+function setOptions({env = 'DEV', db}) {        // this way it is more clear that you need to give object with 2 keys
+    return [env, db];
+}
+
+
+let opt = setOptions({env: 'DEV', db: 'SQLite'});
+console.log(opt);
