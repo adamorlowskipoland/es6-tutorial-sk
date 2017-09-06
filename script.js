@@ -1,12 +1,6 @@
-let person = {
-    name: 'Thomas',
-    age: 30,
-    city: 'Kraków'
-};
+function getNumbers() {
+    return [1, 2, 3, 4, 5];
+}
 
-// let {name, age, city} = person;
-// console.log(name, age, city);
-
-let {name: n, age: a, city: c = 'Warszawa'} = person;
-console.log(n, a, c);
-
+let [a, , , , e] = getNumbers();
+console.log(a, e);
