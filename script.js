@@ -1,5 +1,6 @@
-function multiplyValues(a = 2, b = 5 * a) {
-    return a * b;
+function getValues(...Args) {   // operator REST always at the end
+    return Args.sort();
+
 }
 
-console.log(multiplyValues(3));
+console.log(getValues('zenek', 'zenek4', 'zenek2', 'zenek0'));
