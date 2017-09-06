@@ -1,5 +1,21 @@
-const string = 'ES2015';
-console.log(string.repeat(10));
-console.log(string.startsWith('ES'));   // true
-console.log(string.startsWith(0, 3));   // true
-console.log(string.endsWith('2015'));   // true
+let giftCard = {
+    sku: 'sk001',
+    name: 'Karta podarunkowa',
+    price: 50,
+    class: 'gift'
+};
+
+function createMarkup(product) {
+    return `
+    <div class="product ${product.class}">
+      <h2>${product.name}</h2>
+      <span class="sku">${product.sku}</span>
+      <span class="price">${product.price}</span>
+    </div>
+    `
+}
+
+window.onload = function () {
+    const content = document.querySelector('.content');
+    content.innerHTML = createMarkup(giftCard);
+};
