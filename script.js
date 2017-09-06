@@ -1,46 +1,25 @@
-// this won't work, wrong 'this' usage
-function Counter() {
-    this.count = 0;
-    setTimeout(function() {
-        this.count++;
-        console.log(this.count);
-    }, 1)
-}
-let a = new Counter();
+let product = {
+    id: 293,
+    showId: function() {
+        return this.id;
+    }
+};
 
+let product2 = {
+    id: 293,
+    showId: () => this.id   // undefined ; wrong usage of 'this' context
+};
 
-// this way will help to fire function correctly but it's a bad practice, you can do better then this
-function Counter1() {
-    let that = this;
-    this.count = 0;
-    setTimeout(function() {
-        that.count++;
-        console.log(that.count);
-    }, 1)
-}
-let b = new Counter1();
+console.log(product.showId());
+console.log(product2.showId());
 
+let product3 = () => 1;
+console.log(product3());
 
-// this will work, you bind 'this' in the wanted context
-function Counter2() {
-    this.count = 0;
-    setTimeout(function() {
-        this.count++;
-        console.log(this.count);
-    }.bind(this), 1)
-}
-let c = new Counter2();
+// if you want to return object you need to use brackets otherwise
+// { what is inside of curly brackets } will be interpreted as a function syntax
+let product4 = () => ({ id: 12345});
+console.log(product4());
 
-
-
-// correct usage of arrow function which uses the same 'this' context
-function Counter3() {
-    this.count = 0;
-    setTimeout(() => {
-        this.count++;
-        console.log(this.count);
-    }, 1)
-}
-
-let d = new Counter3();
-
+let Product = () => {};     // arrow functions won't work as a constructor
+let P = new Product();
