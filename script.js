@@ -1,29 +1,20 @@
-let table = ['Adam', 'Tomek', 'Krzysiek', 'Paweł'];
+let m = new Map();
 
-for (let key in table) {
-    console.log(key, table[key]);
+m.set(1, 'React');
+m.set(0, 'Zero');
+m.set(2, 'Angular');
+m.set(3, 'Ember');
+m.set(4, 'Babel');
+
+console.log(m);
+
+for (const v of m) {
+    console.log(v);
 }
 
-for (let value of table) {
-    console.log(value);
-}
+// m.clear();
 
-const name = 'Kazachstan';
-
-for (let character of name) {
-    console.log(character);
-}
-
-const obj = {
-    name: 'Adam',
-    country: 'Poland'
-};
-
-for (let key in obj) {
-    console.log(key, obj[key]);
-}
-
-// doesn't work on objects
-for (let key of obj) {
-    console.log(key);
-}
+console.log(m.size);
+m.delete(0);
+const r = m.get(1);
+console.log(r);
