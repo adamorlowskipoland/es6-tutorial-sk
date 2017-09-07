@@ -1,20 +1,17 @@
-let m = new Map();
+let set = new Set();
 
-m.set(1, 'React');
-m.set(0, 'Zero');
-m.set(2, 'Angular');
-m.set(3, 'Ember');
-m.set(4, 'Babel');
+// values must be unique
+set.add(10);
+set.add(20);
+set.add('OK');
+set.add(true);
+set.add({});
+set.add({});
 
-console.log(m);
+console.log(set);
+set.delete(10);
+console.log(set.has(10));
 
-for (const v of m) {
+for (let v of set) {
     console.log(v);
 }
-
-// m.clear();
-
-console.log(m.size);
-m.delete(0);
-const r = m.get(1);
-console.log(r);
