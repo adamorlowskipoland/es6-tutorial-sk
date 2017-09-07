@@ -8,3 +8,8 @@ for (let value of table) {
     console.log(value);
 }
 
+const name = 'Kazachstan';
+
+for (let character of name) {
+    console.log(character);
+}
