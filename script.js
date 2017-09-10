@@ -1,17 +1,11 @@
-function *gen() {
-    yield "Raz";
-    yield "Dwa";
-    yield "Trzy";
+function *cities() {
+    yield 'Warsaw';
+    yield 'Wroclaw';
+    yield 'Poznan';
 }
 
-let x = gen();
-console.log(x);
-console.log(x.next().value);
-console.log(x);
-console.log(x.next().value);
-console.log(x);
-console.log(x.next().value);
-console.log(x);
-console.log(x.next().value);
-console.log(x);
-console.log(x.next().done);
+let places = cities();
+
+for (let city of places) {
+    console.log(city);
+}
