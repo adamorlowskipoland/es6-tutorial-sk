@@ -1,18 +1,16 @@
-let m = new WeakMap();
+let s = new WeakSet();
 
-let object1 = {id: 1};
-let object2 = {id: 2};
-let object3 = {id: 3};
-// m.set(1, 'React');   // this is how you set Map
-m.set(object1, 'React');    // in WeakMap you need to set an Object
-m.set(object2, 'Ember');
-m.set(object3, 'Angular');
-console.log(m);
+// s.add(1);  // in WeakSet you can use only Objects
 
-// object3 = null;  // this deletes all references
+let obj1 = {name: 'Header'};
+let obj2 = {name: 'Main'};
+let obj3 = {name: 'Footer'};
+s.add(obj1);
+s.add(obj2);
+s.add(obj3);
 
-console.log(m.get(object3));
+console.log(s);
+console.log(s.delete(obj1));
+console.log(s.has(obj1));
 
-for (const v of m) {
-    console.log(v);
-}
+// you can't check WeakSet's length, so you can not iterate through it
