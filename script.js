@@ -1,19 +1,17 @@
-function createIterator(array) {
-    let nextIndex = 0;
+function *gen() {
+    yield "Raz";
+    yield "Dwa";
+    yield "Trzy";
+}
 
-    return {
-        next: function () {
-            return nextIndex < array.length ?
-                {value: array[nextIndex++], done: false} :
-                {done: true}
-        }
-    };
-};
-
-let users = createIterator(['Andrzej', 'Pawel', 'Tomek']);
-
-console.log(users);
-console.log(users.next().value);
-console.log(users.next().value);
-console.log(users.next().value);
-console.log(users.next().done);
+let x = gen();
+console.log(x);
+console.log(x.next().value);
+console.log(x);
+console.log(x.next().value);
+console.log(x);
+console.log(x.next().value);
+console.log(x);
+console.log(x.next().value);
+console.log(x);
+console.log(x.next().done);
