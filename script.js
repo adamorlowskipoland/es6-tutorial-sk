@@ -1,13 +1,10 @@
-// class Article {
-//
-// }
-//
-// const art = new Article();
+class Article {
+    constructor(id, title) {
+        this.id = id;
+        this.title = title;
+    }
+}
 
-const Article = class ArticleClass {
+const art = new Article(95, 'Filtry w CSS3');
 
-};
-
-const art = new Article;
-
-console.log(art);
+console.log(art.id, art.title);
