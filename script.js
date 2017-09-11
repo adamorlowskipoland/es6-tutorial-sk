@@ -25,4 +25,5 @@ console.log(art.getId());
 
 const art1 = new Article(59, 'Wprowadzenie do HTML5');
 
+//  static method use on the class
 console.log(Article.compareId(art, art1));
