@@ -27,3 +27,15 @@ const art1 = new Article(59, 'Wprowadzenie do HTML5');
 
 //  static method use on the class
 console.log(Article.compareId(art, art1));
+
+class BlogArticle extends Article {
+    constructor(id, tittle, category) {
+        super(id, tittle);
+        this.category = category;
+    }
+}
+
+const blog1 = new BlogArticle(23, 'Tworzenie aplikacji z Angular', 'Frameworks');
+
+console.log(blog1);
+console.log(blog1.getId());
