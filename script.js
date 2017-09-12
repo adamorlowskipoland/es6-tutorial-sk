@@ -19,12 +19,10 @@ function getPerson1(name, age) {
         name,
         age,
         checkAge() {
-            if (this.age >= 18) {
-                return true
-            } else {
-                return false
-            }
-        }
+            return this.age >= 18;
+        },
+        //  creating dynamic content
+        [`user${name}${age}`]: 'OK'
     };
 }
 
@@ -32,8 +30,9 @@ let p = getPerson('Tomek', 30);
 console.log(p);
 console.log(p.checkAge());
 
-let p1 = getPerson('Thomas', 31);
+let p1 = getPerson1('Thomas', 31);
 console.log(p1);
 console.log(p1.checkAge());
+console.log(p1.userThomas31);
 
 
