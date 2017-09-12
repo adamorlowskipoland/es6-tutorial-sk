@@ -1,28 +1,39 @@
-//  without a 'new'
-let s1 = Symbol('Logowanie');
-let s2 = Symbol('Logowanie');
-
-//  Symbols are always unique
-console.log(s1 === s2);
-// kinda like objects
-console.log({} === {});
-
-let person = {
-    name: 'Pawel',
-    age: 40,
-    city: 'Warsaw'
-};
-
-let s = Symbol();
-person[s] = '1376';
-
-for (let i in person) {
-    // this will show in console only properties, without symbol
-    console.log(i, person[i]);
+//  es5 way
+function getPerson(name, age) {
+    return {
+        name: name,
+        age: age,
+        checkAge: function () {
+            if (this.age >= 18) {
+                return true
+            } else {
+                return false;
+            }
+        }
+    };
 }
 
-console.log(person);
+//  es6 way
+function getPerson1(name, age) {
+    return {
+        name,
+        age,
+        checkAge() {
+            if (this.age >= 18) {
+                return true
+            } else {
+                return false
+            }
+        }
+    };
+}
 
-// to console log symbol from object you need to do as follow
-console.log(person[s]);
-console.log(Object.getOwnPropertySymbols(person));
+let p = getPerson('Tomek', 30);
+console.log(p);
+console.log(p.checkAge());
+
+let p1 = getPerson('Thomas', 31);
+console.log(p1);
+console.log(p1.checkAge());
+
+
