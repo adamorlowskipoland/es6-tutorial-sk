@@ -1,10 +1,15 @@
-"use strict";
+'use strict';
 
-function sumTwoNumbers() {
-	var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-	var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+var _module2 = require('./module.js');
 
-	return x + y;
-}
+var _module = _interopRequireWildcard(_module2);
 
-console.log(sumTwoNumbers());
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+console.log(_module2.env);
+console.log((0, _module2.sumNumbers)(3, 9));
+
+// 2nd way of importing
+
+console.log(_module.env);
+console.log(_module.sumNumbers(3, 9));
