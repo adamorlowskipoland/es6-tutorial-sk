@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -68,22 +68,13 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["b"] = sumNumbers;
-/* unused harmony export env2 */
-/* unused harmony export sumNumbers2 */
-const env = 'PRODUCTION';
-/* harmony export (immutable) */ __webpack_exports__["a"] = env;
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__module_js__ = __webpack_require__(1);
 
-function sumNumbers(a, b) {
-    return a + b;
-}
 
-//  2nd way of exporting
-const env2 = 'PRODUCTION';
-function sumNumbers2(a, b) {
-    return a + b;
-}
-
+console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["a" /* env */]);
+console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["c" /* sumNumbers */](3, 9));
+console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["b" /* multiply */](3, 10));
 
 
 /***/ }),
@@ -91,16 +82,14 @@ function sumNumbers2(a, b) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__module_js__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return env; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return sumNumbers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return multiply; });
+const env = 'PRODUCTION';
+let sumNumbers = (a, b) => a + b;
+let multiply = (a, b) => a * b;
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["a" /* env */]);
-console.log(Object(__WEBPACK_IMPORTED_MODULE_0__module_js__["b" /* sumNumbers */])(3, 9));
 
-// 2nd way of importing
-
-console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["a" /* env */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["b" /* sumNumbers */](3, 9));
 
 
 /***/ })
