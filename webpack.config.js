@@ -13,7 +13,10 @@ module.exports = {
                 include: [
                     path.resolve(__dirname, './src')
                 ],
-                test: /\.js$/
+                test: /\.js$/,
+                query: {
+                    presets: ["es2015"]
+                }
             }
         ]
     }

@@ -65,32 +65,42 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__module_js__ = __webpack_require__(1);
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["a" /* env */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["c" /* sumNumbers */](3, 9));
-console.log(__WEBPACK_IMPORTED_MODULE_0__module_js__["b" /* multiply */](3, 10));
+var _module2 = __webpack_require__(1);
 
+var _module = _interopRequireWildcard(_module2);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+console.log(_module.env);
+console.log(_module.sumNumbers(3, 9));
+console.log(_module.multiply(3, 10));
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return env; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return sumNumbers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return multiply; });
-const env = 'PRODUCTION';
-let sumNumbers = (a, b) => a + b;
-let multiply = (a, b) => a * b;
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var env = 'PRODUCTION';
+var sumNumbers = function sumNumbers(a, b) {
+  return a + b;
+};
+var multiply = function multiply(a, b) {
+  return a * b;
+};
 
+exports.env = env;
+exports.sumNumbers = sumNumbers;
+exports.multiply = multiply;
 
 /***/ })
 /******/ ]);
