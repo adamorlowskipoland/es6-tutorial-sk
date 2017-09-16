@@ -87,20 +87,13 @@ console.log(_module.multiply(3, 10));
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var env = 'PRODUCTION';
-var sumNumbers = function sumNumbers(a, b) {
-  return a + b;
-};
-var multiply = function multiply(a, b) {
-  return a * b;
-};
+var x = {};
+var hendler = {};
 
-exports.env = env;
-exports.sumNumbers = sumNumbers;
-exports.multiply = multiply;
+var p = new Proxy(x, handler);
+
+p.id = 345;
+console.log(p.id);
 
 /***/ })
 /******/ ]);

@@ -1,5 +1,13 @@
-const env = 'PRODUCTION';
-let sumNumbers = (a, b) => a + b;
-let multiply = (a, b) => a * b;
+let x = {};
+let handler = {
+    get: function (obj, key) {
+        return `Wartość klucza ${obj[key]} ${key}`;
+    }
+};
 
-export {env, sumNumbers, multiply};
+let p = new Proxy(x, handler);
+
+p.id = 345;
+console.log(p.id);
+console.log(x.id);
+
