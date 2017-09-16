@@ -1,13 +1,12 @@
-let x = {};
-let handler = {
-    get: function (obj, key) {
-        return `Wartość klucza ${obj[key]} ${key}`;
-    }
+let color = {
+    name: 'blue',
+    hex: '#0000ff'
 };
 
-let p = new Proxy(x, handler);
+Reflect.deleteProperty(color, 'hex');
+console.log(color);
 
-p.id = 345;
-console.log(p.id);
-console.log(x.id);
-
+let property = Object.defineProperty(color, 'class', {value: 'basic'});
+console.log(property);
+let prop = Reflect.defineProperty(color, 'class', {value: 'basic'});
+console.log(prop);
