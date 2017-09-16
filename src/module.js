@@ -1,12 +1,19 @@
-let color = {
-    name: 'blue',
-    hex: '#0000ff'
-};
+class ArrayWithId extends Array {
+    constructor(id) {
+        super();
+        this.id = id;
+    }
+    updateId(id) {
+        this.id = id;
+    }
+}
 
-Reflect.deleteProperty(color, 'hex');
-console.log(color);
-
-let property = Object.defineProperty(color, 'class', {value: 'basic'});
-console.log(property);
-let prop = Reflect.defineProperty(color, 'class', {value: 'basic'});
-console.log(prop);
+let arr = new ArrayWithId(32);
+arr.push('a');
+arr.push('b');
+arr.push('c');
+arr.push('d');
+console.log(arr);
+console.log(arr.length);
+arr.updateId(31);
+console.log(arr);
