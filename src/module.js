@@ -1,16 +1,13 @@
-const string = 'ok ok ok OK';
-const pattern = /ok/g;
-console.log(pattern.exec(string));
-console.log(pattern.lastIndex);
-console.log(pattern.exec(string));
-console.log(pattern.lastIndex);
-console.log(pattern.exec(string));
-console.log(pattern.lastIndex);
+const obj = {
+    name: 'Tomek',
+    age: '40'
+};
 
-const patterny = /ok/y; // sticky
-console.log(patterny.exec(string));
-console.log(patterny.lastIndex);
-console.log(patterny.exec(string));
-console.log(patterny.lastIndex);
-console.log(patterny.exec(string));
-console.log(patterny.lastIndex);
+// const objClone = Object.assign(obj);
+
+const objClone = Object.assign(obj, {id: 345});
+console.log(objClone, obj);
+
+objClone.city = 'Warsaw';
+console.log(objClone, obj);
+
