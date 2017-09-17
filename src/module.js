@@ -1,13 +1,16 @@
-const obj = {
-    name: 'Tomek',
-    age: '40'
-};
+async function wait3sec(string) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(string);
+        }, 3000);
+    })
+}
 
-// const objClone = Object.assign(obj);
+async function run() {
+    return await wait3sec('Header');
+}
 
-const objClone = Object.assign(obj, {id: 345});
-console.log(objClone, obj);
-
-objClone.city = 'Warsaw';
-console.log(objClone, obj);
-
+run()
+    .then(res => {
+        console.log(res);
+    });
